@@ -14,8 +14,12 @@ RUN apt-get -y update \
 	&& make
 	&& make install
 	&& mono --version
+	&& apt-get install mono-devel -y \
+	&& apt-get install nuget -y \
+	&& apt-get install nunit -y \
 	&& apt-get purge wget -y \
     && apt-get autoremove -y \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* /var/tmp/*
     && mono --version
+    && mozroots --import --ask-remove \
