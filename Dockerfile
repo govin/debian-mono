@@ -7,7 +7,7 @@ RUN apt-get update \
 	&& apt-get upgrade \
 	&& apt-get install build-essential \
 	&& apt-get install wget  -y --no-install-recommends \
-	&& wget http://download.mono-project.com/sources/mono/mono-3.12.0.tar.bz2 \
+	&& wget -qO - http://download.mono-project.com/sources/mono/mono-3.12.0.tar.bz2 | apt-key add - \
 	&& tar -xvf mono-3.12.0.tar.bz2
 	&& cd mono-3.12.0
 	&& ./configure --prefix=/usr/local
