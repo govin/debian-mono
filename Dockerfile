@@ -4,7 +4,6 @@ MAINTAINER Govind R
 
 
 RUN apt-get update \
-	&& apt-get upgrade \
 	&& apt-get install build-essential -y --no-install-recommends \
 	&& apt-get install wget  -y --no-install-recommends \
 	&& wget -qO - http://download.mono-project.com/sources/mono/mono-3.12.0.tar.bz2 | apt-key add - \
