@@ -11,7 +11,7 @@ RUN apt-get -y update \
     && wget -qO - http://download.mono-project.com/repo/xamarin.gpg | apt-key add - \
 	&& apt-get update \
     && apt-get install mono-runtime -y --no-install-recommends \
-    && apt-get install mono-complete -y \
+    && apt-get install mono-complete fsharp -y \
 	&& apt-get install nuget -y \
 	&& apt-get install nunit -y \
     && apt-get purge wget -y \
